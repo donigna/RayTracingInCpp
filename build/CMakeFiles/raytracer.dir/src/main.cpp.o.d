@@ -1,7 +1,7 @@
 CMakeFiles/raytracer.dir/src/main.cpp.o: \
- /home/donigna/OpenGL/RayTracingInOneWeek/src/main.cpp \
+ /home/donigna/OpenGL/RayTracingInCpp/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/rtweekend.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/rtweekend.h \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -201,15 +201,15 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/color.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/interval.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/rtweekend.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/vec3.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/ray.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/camera.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/hittable.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/material.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/hittable.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/hittable_list.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/material.h \
- /home/donigna/OpenGL/RayTracingInOneWeek/include/sphere.h
+ /home/donigna/OpenGL/RayTracingInCpp/include/color.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/interval.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/rtweekend.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/vec3.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/ray.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/camera.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/hittable.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/material.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/hittable.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/hittable_list.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/material.h \
+ /home/donigna/OpenGL/RayTracingInCpp/include/sphere.h

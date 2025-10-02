@@ -6,7 +6,7 @@
 /**
  * @file material.h
  * @brief Material system for ray tracing
- * 
+ *
  * This file defines the material system that determines how light
  * interacts with surfaces. Materials control ray scattering behavior,
  * including diffuse reflection, specular reflection, and refraction.
@@ -15,7 +15,7 @@
 /**
  * @class material
  * @brief Abstract base class for surface materials
- * 
+ *
  * Materials define how rays scatter when they hit surfaces. Each material
  * type implements different scattering behaviors to simulate various
  * surface properties like diffuse, metallic, or glass-like materials.
@@ -35,7 +35,7 @@ public:
      * @param attenuation Color attenuation (how much light is absorbed)
      * @param scattered The scattered ray (output)
      * @return True if ray scatters, false if ray is absorbed
-     * 
+     *
      * This method determines how an incident ray scatters when it hits
      * a surface with this material. It calculates the scattered ray
      * direction and the color attenuation due to material absorption.
@@ -49,7 +49,7 @@ public:
 /**
  * @class lambertian
  * @brief Diffuse material that scatters light uniformly
- * 
+ *
  * Lambertian materials represent matte surfaces that scatter light
  * uniformly in all directions. This creates the characteristic
  * soft, non-reflective appearance of materials like paper or chalk.
@@ -70,7 +70,7 @@ public:
      * @param attenuation Color attenuation (set to albedo)
      * @param scattered The scattered ray (output)
      * @return Always true (Lambertian always scatters)
-     * 
+     *
      * Implements Lambertian diffuse reflection by scattering rays
      * in random directions biased toward the surface normal.
      * The scattered direction is: normal + random_unit_vector()
@@ -96,7 +96,7 @@ private:
 /**
  * @class metal
  * @brief Metallic material with specular reflection and fuzziness
- * 
+ *
  * Metal materials create mirror-like reflections with optional
  * surface roughness (fuzziness) that adds random variation
  * to the reflection direction.
@@ -118,7 +118,7 @@ public:
      * @param attenuation Color attenuation (set to albedo)
      * @param scattered The scattered ray (output)
      * @return True if ray reflects forward, false if absorbed
-     * 
+     *
      * Implements metallic reflection using the law of reflection
      * with added fuzziness for surface roughness. The reflection
      * direction is: reflect(incident, normal) + fuzz * random_vector
@@ -134,27 +134,27 @@ public:
     }
 
 private:
-    color albedo;  ///< Base color of the metal
-    double fuzz;   ///< Surface roughness (0 = perfect mirror, 1 = maximum fuzz)
+    color albedo; ///< Base color of the metal
+    double fuzz;  ///< Surface roughness (0 = perfect mirror, 1 = maximum fuzz)
 };
 
 /**
  * @class dialectric
  * @brief Dielectric material for glass-like surfaces with refraction
- * 
+ *
  * Dielectric materials represent transparent surfaces like glass or water
  * that can both reflect and refract light. The material uses Snell's law
  * for refraction and Fresnel equations for realistic reflection/refraction
  * ratios.
  */
-class dialectric : public material
+class dielectric : public material
 {
 public:
     /**
      * @brief Constructor for dielectric material
      * @param refraction_index Index of refraction (e.g., 1.5 for glass)
      */
-    dialectric(double refraction_index) : refraction_index(refraction_index) {}
+    dielectric(double refraction_index) : refraction_index(refraction_index) {}
 
     /**
      * @brief Scatter ray using dielectric reflection/refraction
@@ -163,7 +163,7 @@ public:
      * @param attenuation Color attenuation (set to white - no absorption)
      * @param scattered The scattered ray (output)
      * @return Always true (dielectric always scatters)
-     * 
+     *
      * Implements dielectric scattering using Snell's law for refraction
      * and Fresnel equations for reflection probability. The material
      * chooses between reflection and refraction based on the Fresnel
@@ -199,7 +199,7 @@ private:
      * @param cosine Cosine of the angle between incident ray and normal
      * @param refraction_index Index of refraction
      * @return Reflectance probability (0-1)
-     * 
+     *
      * Uses Schlick's approximation to calculate the Fresnel reflectance,
      * which determines the probability of reflection vs. refraction
      * at a dielectric surface.
