@@ -2,6 +2,8 @@
 
 A comprehensive C++ implementation of a ray tracer based on Peter Shirley's acclaimed tutorial series. This project demonstrates fundamental ray tracing concepts through a complete, well-documented implementation that renders realistic scenes with various materials and lighting effects.
 
+![Output](output.png?raw=true)
+
 ## 📚 Learning Through Ray Tracing
 
 This project serves as an educational implementation of the concepts presented in **"Ray Tracing in One Weekend"** by Peter Shirley. It's designed to help students and developers understand the mathematical foundations and practical implementation of ray tracing algorithms.
